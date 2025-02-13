@@ -4,7 +4,7 @@ const el = ELEMENTS ;
 
 class Cadastro {
     acessarPaginaDeCadastro(){
-        cy.visit('https://adopet-frontend-iota.vercel.app/');
+        cy.visit('https://adopet-frontend-cypress.vercel.app');
         cy.get(el.registerButton).click();
 
     }

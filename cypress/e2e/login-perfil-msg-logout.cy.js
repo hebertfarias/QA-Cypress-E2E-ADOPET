@@ -1,11 +1,14 @@
+import Login from '../support/pages/cadastro/pagina-login';
+
 describe('Login e testes so site ADOPET', () => {
   beforeEach (() => {
     cy.visit('https://adopet-frontend-cypress.vercel.app/');
     cy.wait(1000); // aguarda para o teste inicializar as ações, nesse caso 1000ms igual a 1 segundo
     cy.get('[data-test="login-button"]').click();
-  })
+  });
   it('Deve carregar as páginas e testes', () => {
-    cy.login('ana.maria@hotmail.com', 'Senha123');
+    Login.preencherCampos();
+    Login.submeterLogin();
     cy.get('.header__user').click();
     cy.wait(1000);
     cy.get('.button').click();
