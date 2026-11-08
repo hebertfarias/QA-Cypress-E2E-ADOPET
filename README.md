@@ -1,23 +1,37 @@
-Testes com Cypress: Documentação e Acompanhamento
+# Automação E2E — Adopet
 
-Olá, pessoal! 👋
+Projeto de testes end-to-end com Cypress para o fluxo de cadastro da aplicação Adopet.
 
-Gostaria de informar que todos os testes realizados com Cypress foram devidamente documentados e organizados para garantir total transparência e acompanhamento dos resultados.
+## Cenário documentado
+- Acessar a aplicação.
+- Navegar até a página de cadastro.
+- Preencher o formulário por meio de Page Object.
+- Submeter o cadastro.
 
-🔍 Onde encontrar as informações?
+## Tecnologias
+- Node.js 20 (recomendado)
+- Cypress 14
+- Mochawesome
 
-    Pasta de Resultados: Todos os logs e resultados dos testes estão armazenados na pasta results. 
-    Aqui, vocês poderão acessar as informações detalhadas de cada execução.
-    Vídeos: Cada execução de teste foi registrada em vídeo e está disponível na pasta videos. 
-    Assim, vocês podem ver o comportamento do sistema durante os testes e verificar se tudo correu conforme esperado.
-    Cypress Cloud: Para uma visão ainda mais completa, todos os testes também foram sincronizados com o Cypress Cloud. 
-    A plataforma permite visualização de logs detalhados, tendências e relatórios interativos, facilitando o monitoramento do desempenho de nossos testes ao longo do tempo.
+## Instalação e execução
+```bash
+npm install
+npm test
+npm run cy:open
+```
 
-🔧 Como acessar:
+## Relatórios
+Os relatórios Mochawesome são configurados em `cypress/results`. A gravação de vídeos está habilitada na configuração do Cypress.
 
-    Localmente: Acesse as pastas results e videos diretamente no seu projeto.
-    No Cypress Cloud: Se preferir um acompanhamento remoto e mais interativo, basta acessar o painel do Cypress Cloud e navegar pelos testes e resultados gravados.
-    https://cloud.cypress.io/projects/mik7mj/runs/4/test-results
+## Aplicação testada
+https://adopet-frontend-cypress.vercel.app — ambiente público externo, sujeito a indisponibilidade e alterações.
 
-
-💬 Se tiverem qualquer dúvida ou precisarem de mais detalhes, fiquem à vontade para perguntar!
+## Estrutura
+```
+cypress/
+  e2e/
+  fixtures/
+  support/
+cypress.config.js
+package.json
+```
